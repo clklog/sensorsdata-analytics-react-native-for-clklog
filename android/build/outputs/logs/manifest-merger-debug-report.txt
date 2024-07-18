@@ -1,0 +1,25 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/anyine/Desktop/work/ligen/code/rn/guairongyi-zs/node_modules/sensorsdata-analytics-react-native/android/src/main/AndroidManifest.xml:1:1-2:43
+INJECTED from /Users/anyine/Desktop/work/ligen/code/rn/guairongyi-zs/node_modules/sensorsdata-analytics-react-native/android/src/main/AndroidManifest.xml:1:1-2:43
+INJECTED from /Users/anyine/Desktop/work/ligen/code/rn/guairongyi-zs/node_modules/sensorsdata-analytics-react-native/android/src/main/AndroidManifest.xml:1:1-2:43
+	package
+		ADDED from /Users/anyine/Desktop/work/ligen/code/rn/guairongyi-zs/node_modules/sensorsdata-analytics-react-native/android/src/main/AndroidManifest.xml:2:5-40
+		INJECTED from /Users/anyine/Desktop/work/ligen/code/rn/guairongyi-zs/node_modules/sensorsdata-analytics-react-native/android/src/main/AndroidManifest.xml
+		INJECTED from /Users/anyine/Desktop/work/ligen/code/rn/guairongyi-zs/node_modules/sensorsdata-analytics-react-native/android/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/anyine/Desktop/work/ligen/code/rn/guairongyi-zs/node_modules/sensorsdata-analytics-react-native/android/src/main/AndroidManifest.xml:1:11-69
+uses-sdk
+INJECTED from /Users/anyine/Desktop/work/ligen/code/rn/guairongyi-zs/node_modules/sensorsdata-analytics-react-native/android/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/anyine/Desktop/work/ligen/code/rn/guairongyi-zs/node_modules/sensorsdata-analytics-react-native/android/src/main/AndroidManifest.xml
+INJECTED from /Users/anyine/Desktop/work/ligen/code/rn/guairongyi-zs/node_modules/sensorsdata-analytics-react-native/android/src/main/AndroidManifest.xml
+INJECTED from /Users/anyine/Desktop/work/ligen/code/rn/guairongyi-zs/node_modules/sensorsdata-analytics-react-native/android/src/main/AndroidManifest.xml
+INJECTED from /Users/anyine/Desktop/work/ligen/code/rn/guairongyi-zs/node_modules/sensorsdata-analytics-react-native/android/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/anyine/Desktop/work/ligen/code/rn/guairongyi-zs/node_modules/sensorsdata-analytics-react-native/android/src/main/AndroidManifest.xml
+		ADDED from /Users/anyine/Desktop/work/ligen/code/rn/guairongyi-zs/node_modules/sensorsdata-analytics-react-native/android/src/main/AndroidManifest.xml
+		INJECTED from /Users/anyine/Desktop/work/ligen/code/rn/guairongyi-zs/node_modules/sensorsdata-analytics-react-native/android/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/anyine/Desktop/work/ligen/code/rn/guairongyi-zs/node_modules/sensorsdata-analytics-react-native/android/src/main/AndroidManifest.xml
+		ADDED from /Users/anyine/Desktop/work/ligen/code/rn/guairongyi-zs/node_modules/sensorsdata-analytics-react-native/android/src/main/AndroidManifest.xml
+		INJECTED from /Users/anyine/Desktop/work/ligen/code/rn/guairongyi-zs/node_modules/sensorsdata-analytics-react-native/android/src/main/AndroidManifest.xml
