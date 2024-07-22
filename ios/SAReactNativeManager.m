@@ -235,6 +235,7 @@ NSString *const kSAEventElementContentProperty = @"$element_content";
     }
 
     SAConfigOptions *options = [[SAConfigOptions alloc] initWithServerURL:serverURL launchOptions:nil];
+    options.enableTrackAppCrash = YES;
     NSNumber *enableLog = settings[@"show_log"];
     if ([enableLog isKindOfClass:[NSNumber class]]) {
         options.enableLog = [enableLog boolValue];
