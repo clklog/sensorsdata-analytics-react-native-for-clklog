@@ -1068,6 +1068,8 @@ public class RNSensorsAnalyticsModule extends ReactContextBaseJavaModule {
                 saConfigOptions.enableHeatMap(configJson.optBoolean("heat_map", false));
             }
             saConfigOptions.enableTrackAppCrash();
+            saConfigOptions.enableSession(true);
+            saConfigOptions.setEventSessionTimeout(60);
             SensorsDataAPI.startWithConfigOptions(getCurrentActivity(), saConfigOptions);
             List<SensorsDataAPI.AutoTrackEventType> list = new ArrayList<>();
             list.add(SensorsDataAPI.AutoTrackEventType.APP_START);
