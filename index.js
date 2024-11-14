@@ -1,31 +1,27 @@
-import { NativeModules} from 'react-native';
+import { NativeModules } from 'react-native'
 
-const { RNSensorsAnalyticsModule, RNSensorsDataModule } = NativeModules;
+const { RNSensorsAnalyticsModule, RNSensorsDataModule } = NativeModules
 
 const SAAutoTrackType = {
-  START : 1,
-  END : 2,
-  CLICK : 4,
-  VIEW_SCREEN : 8
+  START: 1,
+  END: 2,
+  CLICK: 4,
+  VIEW_SCREEN: 8
 }
 /**
  * 登录
  *
  * @param loginId
  */
-function login (loginId) {
-  RNSensorsAnalyticsModule &&
-    RNSensorsAnalyticsModule.login &&
-    RNSensorsAnalyticsModule.login(loginId);
+function login(loginId) {
+  RNSensorsAnalyticsModule && RNSensorsAnalyticsModule.login && RNSensorsAnalyticsModule.login(loginId)
 }
 
 /**
  * 退出登录
  */
-function logout () {
-  RNSensorsAnalyticsModule &&
-    RNSensorsAnalyticsModule.logout &&
-    RNSensorsAnalyticsModule.logout();
+function logout() {
+  RNSensorsAnalyticsModule && RNSensorsAnalyticsModule.logout && RNSensorsAnalyticsModule.logout()
 }
 
 /**
@@ -35,10 +31,8 @@ function logout () {
  * Sex
  * Age
  */
-function profileSet (profile) {
-  RNSensorsAnalyticsModule &&
-    RNSensorsAnalyticsModule.profileSet &&
-    RNSensorsAnalyticsModule.profileSet(profile);
+function profileSet(profile) {
+  RNSensorsAnalyticsModule && RNSensorsAnalyticsModule.profileSet && RNSensorsAnalyticsModule.profileSet(profile)
 }
 
 /**
@@ -46,12 +40,9 @@ function profileSet (profile) {
  *
  * @param profile 类型 {}
  */
-function profileSetOnce (profile) {
-  RNSensorsAnalyticsModule &&
-    RNSensorsAnalyticsModule.profileSetOnce &&
-    RNSensorsAnalyticsModule.profileSetOnce(profile);
+function profileSetOnce(profile) {
+  RNSensorsAnalyticsModule && RNSensorsAnalyticsModule.profileSetOnce && RNSensorsAnalyticsModule.profileSetOnce(profile)
 }
-
 
 /**
  * 追踪事件
@@ -59,10 +50,8 @@ function profileSetOnce (profile) {
  * @param event 事件名称，类型 String
  * @param properties 事件属性，类型 {}
  */
-function track (event, properties) {
-  RNSensorsAnalyticsModule &&
-    RNSensorsAnalyticsModule.track &&
-    RNSensorsAnalyticsModule.track(event, properties);
+function track(event, properties) {
+  RNSensorsAnalyticsModule && RNSensorsAnalyticsModule.track && RNSensorsAnalyticsModule.track(event, properties)
 }
 
 /**
@@ -70,10 +59,8 @@ function track (event, properties) {
  *
  * @param event 事件名称，类型 String
  */
-function trackTimerStart (event) {
-  RNSensorsAnalyticsModule &&
-    RNSensorsAnalyticsModule.trackTimerStart &&
-    RNSensorsAnalyticsModule.trackTimerStart(event);
+function trackTimerStart(event) {
+  RNSensorsAnalyticsModule && RNSensorsAnalyticsModule.trackTimerStart && RNSensorsAnalyticsModule.trackTimerStart(event)
 }
 
 /**
@@ -82,19 +69,15 @@ function trackTimerStart (event) {
  * @param event 事件名称，类型 String
  * @param properties 事件属性，类型 {}
  */
-function trackTimerEnd (event, properties) {
-  RNSensorsAnalyticsModule &&
-    RNSensorsAnalyticsModule.trackTimerEnd &&
-    RNSensorsAnalyticsModule.trackTimerEnd(event, properties);
+function trackTimerEnd(event, properties) {
+  RNSensorsAnalyticsModule && RNSensorsAnalyticsModule.trackTimerEnd && RNSensorsAnalyticsModule.trackTimerEnd(event, properties)
 }
 
 /**
  * 清除所有事件计时器
  */
-function clearTrackTimer(){
-  RNSensorsAnalyticsModule &&
-    RNSensorsAnalyticsModule.clearTrackTimer &&
-    RNSensorsAnalyticsModule.clearTrackTimer();
+function clearTrackTimer() {
+  RNSensorsAnalyticsModule && RNSensorsAnalyticsModule.clearTrackTimer && RNSensorsAnalyticsModule.clearTrackTimer()
 }
 
 /**
@@ -103,10 +86,10 @@ function clearTrackTimer(){
  * @param eventName 事件名称，类型 String
  * @param properties 事件属性，类型 {}
  */
-function trackInstallation(eventName, properties){
+function trackInstallation(eventName, properties) {
   RNSensorsAnalyticsModule &&
     RNSensorsAnalyticsModule.trackInstallation &&
-    RNSensorsAnalyticsModule.trackInstallation(eventName, properties);
+    RNSensorsAnalyticsModule.trackInstallation(eventName, properties)
 }
 
 /**
@@ -115,10 +98,8 @@ function trackInstallation(eventName, properties){
  * @param url 类型 String
  * @param properties 事件属性，类型 {}
  */
-function trackViewScreen(url, properties){
-  RNSensorsAnalyticsModule &&
-    RNSensorsAnalyticsModule.trackViewScreen &&
-    RNSensorsAnalyticsModule.trackViewScreen(url, properties);
+function trackViewScreen(url, properties) {
+  RNSensorsAnalyticsModule && RNSensorsAnalyticsModule.trackViewScreen && RNSensorsAnalyticsModule.trackViewScreen(url, properties)
 }
 
 /**
@@ -128,10 +109,8 @@ function trackViewScreen(url, properties){
  * @param property 属性名称，类型 String
  * @param value 属性值，类型 Number
  */
-function profileIncrement (property, value) {
-  RNSensorsAnalyticsModule &&
-    RNSensorsAnalyticsModule.profileIncrement &&
-    RNSensorsAnalyticsModule.profileIncrement(property, value);
+function profileIncrement(property, value) {
+  RNSensorsAnalyticsModule && RNSensorsAnalyticsModule.profileIncrement && RNSensorsAnalyticsModule.profileIncrement(property, value)
 }
 
 /**
@@ -140,10 +119,8 @@ function profileIncrement (property, value) {
  * @param property 属性名称，类型 String
  * @param strList 属性值，类型 []
  */
-function profileAppend (property, strList) {
-  RNSensorsAnalyticsModule &&
-    RNSensorsAnalyticsModule.profileAppend &&
-    RNSensorsAnalyticsModule.profileAppend(property, strList);
+function profileAppend(property, strList) {
+  RNSensorsAnalyticsModule && RNSensorsAnalyticsModule.profileAppend && RNSensorsAnalyticsModule.profileAppend(property, strList)
 }
 
 /**
@@ -151,44 +128,40 @@ function profileAppend (property, strList) {
  *
  * @param property 属性名称，类型 String
  */
-function profileUnset (property) {
-  RNSensorsAnalyticsModule &&
-    RNSensorsAnalyticsModule.profileUnset &&
-    RNSensorsAnalyticsModule.profileUnset(property);
+function profileUnset(property) {
+  RNSensorsAnalyticsModule && RNSensorsAnalyticsModule.profileUnset && RNSensorsAnalyticsModule.profileUnset(property)
 }
 
 /**
  * 删除用户所有 Profile.
  */
-function profileDelete () {
-  RNSensorsAnalyticsModule &&
-    RNSensorsAnalyticsModule.profileDelete &&
-    RNSensorsAnalyticsModule.profileDelete();
+function profileDelete() {
+  RNSensorsAnalyticsModule && RNSensorsAnalyticsModule.profileDelete && RNSensorsAnalyticsModule.profileDelete()
 }
 
 /**
  * Promise 方式，获取 distinctId
  */
-async function getDistinctIdPromise (){
-  if(RNSensorsAnalyticsModule && RNSensorsAnalyticsModule.getDistinctIdPromise){
-    try{
-      return await RNSensorsAnalyticsModule.getDistinctIdPromise();
-    }catch(e){
-   	  console.log(e);
-   	}
+async function getDistinctIdPromise() {
+  if (RNSensorsAnalyticsModule && RNSensorsAnalyticsModule.getDistinctIdPromise) {
+    try {
+      return await RNSensorsAnalyticsModule.getDistinctIdPromise()
+    } catch (e) {
+      console.log(e)
+    }
   }
 }
 
 /**
  * Promise 方式 getAnonymousId 获取匿名 ID.
  */
-async function getAnonymousIdPromise () {
-  if(RNSensorsAnalyticsModule && RNSensorsAnalyticsModule.getAnonymousIdPromise){
-    try{
-      return await RNSensorsAnalyticsModule.getAnonymousIdPromise();
-    }catch(e){
-   	  console.log(e);
-   	}
+async function getAnonymousIdPromise() {
+  if (RNSensorsAnalyticsModule && RNSensorsAnalyticsModule.getAnonymousIdPromise) {
+    try {
+      return await RNSensorsAnalyticsModule.getAnonymousIdPromise()
+    } catch (e) {
+      console.log(e)
+    }
   }
 }
 
@@ -197,10 +170,10 @@ async function getAnonymousIdPromise () {
  *
  * @param properties 公共属性，类型 {}
  */
-function registerSuperProperties (properties) {
+function registerSuperProperties(properties) {
   RNSensorsAnalyticsModule &&
     RNSensorsAnalyticsModule.registerSuperProperties &&
-    RNSensorsAnalyticsModule.registerSuperProperties(properties);
+    RNSensorsAnalyticsModule.registerSuperProperties(properties)
 }
 
 /**
@@ -208,37 +181,29 @@ function registerSuperProperties (properties) {
  *
  * @param property 要删除的公共属性属性名称，类型 String
  */
-function unregisterSuperProperty (property) {
-  RNSensorsAnalyticsModule &&
-    RNSensorsAnalyticsModule.unregisterSuperProperty &&
-    RNSensorsAnalyticsModule.unregisterSuperProperty(property);
+function unregisterSuperProperty(property) {
+  RNSensorsAnalyticsModule && RNSensorsAnalyticsModule.unregisterSuperProperty && RNSensorsAnalyticsModule.unregisterSuperProperty(property)
 }
 
 /**
  * 删除所有公共属性
  */
-function clearSuperProperties () {
-  RNSensorsAnalyticsModule &&
-    RNSensorsAnalyticsModule.clearSuperProperties &&
-    RNSensorsAnalyticsModule.clearSuperProperties();
+function clearSuperProperties() {
+  RNSensorsAnalyticsModule && RNSensorsAnalyticsModule.clearSuperProperties && RNSensorsAnalyticsModule.clearSuperProperties()
 }
 
 /**
  * 强制发送数据到服务端
  */
-function flush () {
-  RNSensorsAnalyticsModule &&
-    RNSensorsAnalyticsModule.flush &&
-    RNSensorsAnalyticsModule.flush();
+function flush() {
+  RNSensorsAnalyticsModule && RNSensorsAnalyticsModule.flush && RNSensorsAnalyticsModule.flush()
 }
 
 /**
  * 删除本地数据库的所有数据！！！请谨慎使用
  */
-function deleteAll () {
-  RNSensorsAnalyticsModule &&
-    RNSensorsAnalyticsModule.deleteAll &&
-    RNSensorsAnalyticsModule.deleteAll();
+function deleteAll() {
+  RNSensorsAnalyticsModule && RNSensorsAnalyticsModule.deleteAll && RNSensorsAnalyticsModule.deleteAll()
 }
 
 /**
@@ -246,10 +211,8 @@ function deleteAll () {
  *
  * @param anonymousId 传入的的匿名 ID，仅接受数字、下划线和大小写字母，类型 String
  */
-function identify (anonymousId) {
-  RNSensorsAnalyticsModule &&
-    RNSensorsAnalyticsModule.identify &&
-    RNSensorsAnalyticsModule.identify(anonymousId);
+function identify(anonymousId) {
+  RNSensorsAnalyticsModule && RNSensorsAnalyticsModule.identify && RNSensorsAnalyticsModule.identify(anonymousId)
 }
 /**
  * 导出 trackTimerPause 方法给 RN 使用.
@@ -259,9 +222,7 @@ function identify (anonymousId) {
  * @param eventName 事件的名称
  */
 function trackTimerPause(eventName) {
-  RNSensorsAnalyticsModule &&
-    RNSensorsAnalyticsModule.trackTimerPause &&
-    RNSensorsAnalyticsModule.trackTimerPause(eventName);
+  RNSensorsAnalyticsModule && RNSensorsAnalyticsModule.trackTimerPause && RNSensorsAnalyticsModule.trackTimerPause(eventName)
 }
 
 /**
@@ -272,9 +233,7 @@ function trackTimerPause(eventName) {
  * @param eventName 事件的名称
  */
 function trackTimerResume(eventName) {
-  RNSensorsAnalyticsModule &&
-    RNSensorsAnalyticsModule.trackTimerResume &&
-    RNSensorsAnalyticsModule.trackTimerResume(eventName);
+  RNSensorsAnalyticsModule && RNSensorsAnalyticsModule.trackTimerResume && RNSensorsAnalyticsModule.trackTimerResume(eventName)
 }
 
 /**
@@ -286,9 +245,7 @@ function trackTimerResume(eventName) {
  *     获取方式：JPushModule.getRegistrationID(callback)
  */
 function profilePushId(pushTypeKey, pushId) {
-  RNSensorsAnalyticsModule &&
-    RNSensorsAnalyticsModule.profilePushId &&
-    RNSensorsAnalyticsModule.profilePushId(pushTypeKey, pushId);
+  RNSensorsAnalyticsModule && RNSensorsAnalyticsModule.profilePushId && RNSensorsAnalyticsModule.profilePushId(pushTypeKey, pushId)
 }
 
 /**
@@ -297,18 +254,14 @@ function profilePushId(pushTypeKey, pushId) {
  * @param pushTypeKey 属性名称（例如 jgId）
  */
 function profileUnsetPushId(pushTypeKey) {
-  RNSensorsAnalyticsModule &&
-    RNSensorsAnalyticsModule.profileUnsetPushId &&
-    RNSensorsAnalyticsModule.profileUnsetPushId(pushTypeKey);
+  RNSensorsAnalyticsModule && RNSensorsAnalyticsModule.profileUnsetPushId && RNSensorsAnalyticsModule.profileUnsetPushId(pushTypeKey)
 }
 
 /**
  * 重置默认匿名 id
  */
 function resetAnonymousId() {
-  RNSensorsAnalyticsModule &&
-    RNSensorsAnalyticsModule.resetAnonymousId &&
-    RNSensorsAnalyticsModule.resetAnonymousId();
+  RNSensorsAnalyticsModule && RNSensorsAnalyticsModule.resetAnonymousId && RNSensorsAnalyticsModule.resetAnonymousId()
 }
 
 /**
@@ -317,9 +270,7 @@ function resetAnonymousId() {
  * @param serverUrl 当前 serverUrl
  */
 function setServerUrl(serverUrl) {
-  RNSensorsAnalyticsModule &&
-    RNSensorsAnalyticsModule.setServerUrl &&
-    RNSensorsAnalyticsModule.setServerUrl(serverUrl);
+  RNSensorsAnalyticsModule && RNSensorsAnalyticsModule.setServerUrl && RNSensorsAnalyticsModule.setServerUrl(serverUrl)
 }
 
 /**
@@ -330,9 +281,7 @@ function setServerUrl(serverUrl) {
  * @param properties item 相关属性
  */
 function itemSet(itemType, itemId, properties) {
-  RNSensorsAnalyticsModule &&
-    RNSensorsAnalyticsModule.itemSet &&
-    RNSensorsAnalyticsModule.itemSet(itemType, itemId, properties);
+  RNSensorsAnalyticsModule && RNSensorsAnalyticsModule.itemSet && RNSensorsAnalyticsModule.itemSet(itemType, itemId, properties)
 }
 
 /**
@@ -342,9 +291,7 @@ function itemSet(itemType, itemId, properties) {
  * @param itemId item ID
  */
 function itemDelete(itemType, itemId) {
-  RNSensorsAnalyticsModule &&
-    RNSensorsAnalyticsModule.itemDelete &&
-    RNSensorsAnalyticsModule.itemDelete(itemType, itemId);
+  RNSensorsAnalyticsModule && RNSensorsAnalyticsModule.itemDelete && RNSensorsAnalyticsModule.itemDelete(itemType, itemId)
 }
 
 /**
@@ -352,11 +299,11 @@ function itemDelete(itemType, itemId) {
  */
 async function getSuperPropertiesPromise() {
   if (RNSensorsAnalyticsModule && RNSensorsAnalyticsModule.getSuperPropertiesPromise) {
-    try{
-      return await RNSensorsAnalyticsModule.getSuperPropertiesPromise();
-    }catch(e){
-   	  console.log(e);
-   	}
+    try {
+      return await RNSensorsAnalyticsModule.getSuperPropertiesPromise()
+    } catch (e) {
+      console.log(e)
+    }
   }
 }
 
@@ -365,11 +312,11 @@ async function getSuperPropertiesPromise() {
  */
 async function getPresetPropertiesPromise() {
   if (RNSensorsAnalyticsModule && RNSensorsAnalyticsModule.getPresetPropertiesPromise) {
-    try{
-      return await RNSensorsAnalyticsModule.getPresetPropertiesPromise();
-    }catch(e){
-   	  console.log(e);
-   	}
+    try {
+      return await RNSensorsAnalyticsModule.getPresetPropertiesPromise()
+    } catch (e) {
+      console.log(e)
+    }
   }
 }
 
@@ -380,11 +327,11 @@ async function getPresetPropertiesPromise() {
  */
 async function getLoginIdPromise() {
   if (RNSensorsAnalyticsModule && RNSensorsAnalyticsModule.getLoginIdPromise) {
-    try{
-      return await RNSensorsAnalyticsModule.getLoginIdPromise();
-    }catch(e){
-   	  console.log(e);
-   	}
+    try {
+      return await RNSensorsAnalyticsModule.getLoginIdPromise()
+    } catch (e) {
+      console.log(e)
+    }
   }
 }
 
@@ -395,11 +342,11 @@ async function getLoginIdPromise() {
  */
 async function isAutoTrackEnabledPromise() {
   if (RNSensorsAnalyticsModule && RNSensorsAnalyticsModule.isAutoTrackEnabledPromise) {
-	try{
-	  return await RNSensorsAnalyticsModule.isAutoTrackEnabledPromise();
-	}catch(e){
-	  console.log(e);
-	}
+    try {
+      return await RNSensorsAnalyticsModule.isAutoTrackEnabledPromise()
+    } catch (e) {
+      console.log(e)
+    }
   }
 }
 
@@ -410,11 +357,11 @@ async function isAutoTrackEnabledPromise() {
  */
 async function isVisualizedAutoTrackEnabledPromise() {
   if (RNSensorsAnalyticsModule && RNSensorsAnalyticsModule.isVisualizedAutoTrackEnabledPromise) {
-    try{
-      return await RNSensorsAnalyticsModule.isVisualizedAutoTrackEnabledPromise();
-    }catch(e){
-   	  console.log(e);
-   	}
+    try {
+      return await RNSensorsAnalyticsModule.isVisualizedAutoTrackEnabledPromise()
+    } catch (e) {
+      console.log(e)
+    }
   }
 }
 
@@ -425,11 +372,11 @@ async function isVisualizedAutoTrackEnabledPromise() {
  */
 async function isHeatMapEnabledPromise() {
   if (RNSensorsAnalyticsModule && RNSensorsAnalyticsModule.isHeatMapEnabledPromise) {
-    try{
-      return await RNSensorsAnalyticsModule.isHeatMapEnabledPromise();
-    }catch(e){
-   	  console.log(e);
-   	}
+    try {
+      return await RNSensorsAnalyticsModule.isHeatMapEnabledPromise()
+    } catch (e) {
+      console.log(e)
+    }
   }
 }
 
@@ -444,11 +391,8 @@ async function isHeatMapEnabledPromise() {
  * TYPE_ALL = 0xFF;//ALL 255
  * 例：若需要开启 4G 5G 发送数据，则需要设置 4 + 16 = 20
  */
-
 function setFlushNetworkPolicy(networkType) {
-  RNSensorsAnalyticsModule &&
-    RNSensorsAnalyticsModule.setFlushNetworkPolicy &&
-    RNSensorsAnalyticsModule.setFlushNetworkPolicy(networkType);
+  RNSensorsAnalyticsModule && RNSensorsAnalyticsModule.setFlushNetworkPolicy && RNSensorsAnalyticsModule.setFlushNetworkPolicy(networkType)
 }
 
 /**
@@ -458,45 +402,37 @@ function setFlushNetworkPolicy(networkType) {
  * @param properties 渠道追踪事件的属性
  */
 function trackAppInstall(properties) {
-  RNSensorsAnalyticsModule &&
-    RNSensorsAnalyticsModule.trackAppInstall &&
-    RNSensorsAnalyticsModule.trackAppInstall(properties);
+  RNSensorsAnalyticsModule && RNSensorsAnalyticsModule.trackAppInstall && RNSensorsAnalyticsModule.trackAppInstall(properties)
 }
 
 function registerDynamicSuperProperties() {
-  var dynamicProxy = {};
-  RNSensorsDataModule && RNSensorsDataModule.registerDynamicPlugin && RNSensorsDataModule.registerDynamicPlugin();
+  var dynamicProxy = {}
+  RNSensorsDataModule && RNSensorsDataModule.registerDynamicPlugin && RNSensorsDataModule.registerDynamicPlugin()
   try {
-    Object.defineProperty(dynamicProxy,'properties', {
+    Object.defineProperty(dynamicProxy, 'properties', {
       set: function (value) {
         if (typeof value === 'object') {
-          RNSensorsDataModule && RNSensorsDataModule.setDynamicSuperProperties && RNSensorsDataModule.setDynamicSuperProperties(value);
+          RNSensorsDataModule && RNSensorsDataModule.setDynamicSuperProperties && RNSensorsDataModule.setDynamicSuperProperties(value)
         }
       }
-  });
+    })
   } catch (e) {
     console.log(e)
   }
-  return dynamicProxy;
+  return dynamicProxy
 }
 
-function bind(key, value){
-      RNSensorsAnalyticsModule &&
-        RNSensorsAnalyticsModule.bind &&
-        RNSensorsAnalyticsModule.bind(key, value);
+function bind(key, value) {
+  RNSensorsAnalyticsModule && RNSensorsAnalyticsModule.bind && RNSensorsAnalyticsModule.bind(key, value)
 }
 
-function unbind(key, value){
-      RNSensorsAnalyticsModule &&
-        RNSensorsAnalyticsModule.unbind &&
-        RNSensorsAnalyticsModule.unbind(key, value);
+function unbind(key, value) {
+  RNSensorsAnalyticsModule && RNSensorsAnalyticsModule.unbind && RNSensorsAnalyticsModule.unbind(key, value)
 }
 
-function init(config){
-  RNSensorsAnalyticsModule &&
-    RNSensorsAnalyticsModule.init &&
-    RNSensorsAnalyticsModule.init(config);
-    RNSensorsDataModule && RNSensorsDataModule.registerDynamicPlugin && RNSensorsDataModule.registerDynamicPlugin();
+function init(config) {
+  RNSensorsAnalyticsModule && RNSensorsAnalyticsModule.init && RNSensorsAnalyticsModule.init(config)
+  RNSensorsDataModule && RNSensorsDataModule.registerDynamicPlugin && RNSensorsDataModule.registerDynamicPlugin()
 }
 
 /************** Android only start *****************/
@@ -510,7 +446,7 @@ function init(config){
 function setSessionIntervalTime(sessionIntervalTime) {
   RNSensorsAnalyticsModule &&
     RNSensorsAnalyticsModule.setSessionIntervalTime &&
-    RNSensorsAnalyticsModule.setSessionIntervalTime(sessionIntervalTime);
+    RNSensorsAnalyticsModule.setSessionIntervalTime(sessionIntervalTime)
 }
 
 /**
@@ -522,11 +458,11 @@ function setSessionIntervalTime(sessionIntervalTime) {
  */
 async function getSessionIntervalTimePromise() {
   if (RNSensorsAnalyticsModule && RNSensorsAnalyticsModule.getSessionIntervalTimePromise) {
-	try{
-	  return await RNSensorsAnalyticsModule.getSessionIntervalTimePromise();
-	}catch(e){
-	  console.log(e);
-	}
+    try {
+      return await RNSensorsAnalyticsModule.getSessionIntervalTimePromise()
+    } catch (e) {
+      console.log(e)
+    }
   }
 }
 
@@ -536,9 +472,7 @@ async function getSessionIntervalTimePromise() {
  * @param isRequest boolean
  */
 function enableNetworkRequest(isRequest) {
-  RNSensorsAnalyticsModule &&
-    RNSensorsAnalyticsModule.enableNetworkRequest &&
-    RNSensorsAnalyticsModule.enableNetworkRequest(isRequest);
+  RNSensorsAnalyticsModule && RNSensorsAnalyticsModule.enableNetworkRequest && RNSensorsAnalyticsModule.enableNetworkRequest(isRequest)
 }
 
 /**
@@ -548,25 +482,23 @@ function enableNetworkRequest(isRequest) {
  */
 async function isNetworkRequestEnablePromise() {
   if (RNSensorsAnalyticsModule && RNSensorsAnalyticsModule.isNetworkRequestEnablePromise) {
-	try{
-	  return await RNSensorsAnalyticsModule.isNetworkRequestEnablePromise();
-	}catch(e){
-	  console.log(e);
-	}
+    try {
+      return await RNSensorsAnalyticsModule.isNetworkRequestEnablePromise()
+    } catch (e) {
+      console.log(e)
+    }
   }
 }
 
 /**
  * 开启数据采集
  */
-function enableDataCollect(){
-  RNSensorsAnalyticsModule &&
-    RNSensorsAnalyticsModule.enableDataCollect &&
-    RNSensorsAnalyticsModule.enableDataCollect();
+function enableDataCollect() {
+  RNSensorsAnalyticsModule && RNSensorsAnalyticsModule.enableDataCollect && RNSensorsAnalyticsModule.enableDataCollect()
 }
 
 /************** Android only end *****************/
-export {SAAutoTrackType}
+export { SAAutoTrackType }
 
 export default {
   login,
@@ -616,5 +548,5 @@ export default {
   registerDynamicSuperProperties,
   bind,
   unbind,
-  sa: RNSensorsAnalyticsModule,
-};
+  sa: RNSensorsAnalyticsModule
+}
